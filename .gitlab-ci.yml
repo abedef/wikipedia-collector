@@ -13,5 +13,5 @@ deploy-job:
   stage: deploy
   script:
     - echo "Deploying application..."
-    - echo "TODO: Deployment"
+    - echo "TODO Deployment"
     - echo "Application successfully deployed."
