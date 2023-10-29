@@ -1,0 +1,17 @@
+stages:
+  - build
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Building the Docker image..."
+    - docker build --pull -t wikipedia-collector:latest -t wikipedia-collector:$CI_COMMIT_SHORT_SHA .
+    - echo "Build complete."
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
+    - echo "TODO: Deployment"
+    - echo "Application successfully deployed."
